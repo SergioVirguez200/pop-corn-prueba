@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <title>Desafio Pop Corn</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: arial;
+      display: grid;
+      grid-template-rows: 10% 1fr;
+      grid-template-columns: 10% 1fr;
+      grid-template-areas: "header header" "aside movies";
+    }
+
+    .container-header {
+      display: grid;
+      grid-template-columns: 1fr 677px 320px;
+      grid-template-rows: 100px;
+      grid-gap: 5px;
+      width: 1px;
+      margin: -18px 0 0 24px;
+      position: relative;
+    }
+
+    #cabecera {
+      background: white;
+      height: 80px;
+      grid-area: header;
+    }
+    
+    a {
+      cursor: pointer;
+      text-decoration: none;
+    }
+     .navbar {
+       width: 100%;
+       height: 80px;
+     }
+
+     .container1-h {
+       /* grid-area: brand; */
+       display: flex;
+       justify-content: center;
+       align-items: center;
+     }
+
+     .popcorn {
+       width: 2.5em;
+       decoration: none;
+       margin-left: 35px;
+     }
+
+     .navbar h1 {
+       color: white;
+       width: 250px;
+       -webkit-text-stroke: 1px #FD6766;
+      font-size: 2.2em;
+      margin: 0 4px 0 4px;
+     }
+
+     .container-form {
+       display: flex;
+       justify-items: center;
+       align-items: center;
+       padding: 0 32px;
+     }
+
+     .search input{
+       width: 639px;
+       height: 2.5em;
+       border-radius: 4px;
+       border: 1px solid grey;
+       font-size: 14px;
+       padding-left: 10px;
+     }
+
+     .container-user {
+       display: flex;
+       justify-content: center;
+       align-content: center;
+     }
+
+     .container-user figure {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-items: center;
+     }
+
+     .user-image {
+       border-radius: 50%;
+       width: 48px;
+      height: 48px;
+       /* position: absolute; */
+       
+     }
+
+     .container-user h3 {
+       display: flex;
+       font-size: 18px;
+       font-weight: bold;
+       color: rgba(0, 0, 3, .7);
+       text-align: center;
+       /* height: 20px; */
+       margin: 35px 0px 35px 0;
+       width: 133px;
+       justify-content: center;
+       align-items: center;
+     }
+
+     #barra-lateral {
+       background: #FD6766;
+       height: 100%;
+       display: grid;
+       grid-area: aside;
+       grid-template-rows: 50px 1fr 1fr 800px 1fr;
+     }
+
+     #barra-lateral ul{
+       color: white;
+       list-style: none;
+       margin: 0;
+       padding: 11px;
+       display: grid;
+       grid-template-columns: 100px;
+       grid-template-rows: 100px 100px 100px;
+       grid-gap: 42px;
+     }
+
+     #barra-lateral .menu-settings {
+      color: white;
+      list-style: none;
+     }
+
+     #barra-lateral ul li p {
+       font-size: 1rem;
+       
+     }
+
+     .fas.fa-home:before{
+       display: inline-block;
+     }
+
+     #barra-lateral li {
+      font-size: 2rem;
+      }
+
+    #barra-lateral a {
+      color: white;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    }
+
+
+     #barra-lateral .menu-settings {
+       /* display: grid;
+       grid-template-columns: 1fr;
+       grid-template-rows: 1fr; */
+     }
+
+     #contenido {
+       grid-area: movies;
+     }
+
+
+  </style>
+</head>
+<body>
+   
+  <header class="header-site" id="cabecera">
+    <div class="navbar">
+        <div class="container-header">
+    <a class="container1-h" href="">
+      <img src="images/popcorn.png" alt="popcorn" class="popcorn">
+      <h1 class="title">
+        Movies.es
+      </h1>
+    </a>
+    <div class="container-form">
+      <form class="search">
+        <input type="search" placeholder="Busca las mejores películas, o sus referencias">
+      </form>
+    </div>
+    <a href="" class="container-user">
+        <h3>Bambi Camilo</h3>
+
+      <figure>
+        <img src="images/bambi.jpg" alt="user-image" class="user-image">
+      </figure>
+    </a>
+      
+    </div>
+    </div>
+ 
+  </header>
+
+  <aside id="barra-lateral">
+      <div class="divisor-1">
+
+        </div>
+    
+    <ul class="menu">
+        <li>
+      <a href="">
+        <i class="fas fa-home"></i>
+        <p>Home</p>
+     </a>
+    </li>
+    <li>
+    <a href="">
+        <i class="fas fa-fire"></i>
+        <p>Tendencias</p>
+    </a>
+  </li>
+  <li>
+  <a href="">
+        <i class="fas fa-heart"></i>
+        <p>Favoritos</p>
+    </a>
+  </li>
+    </ul> 
+  
+    <div class="divisor-2">
+      
+    </div>
+    <ul class="menu-settings">
+        <li>
+          <a href="">
+            <i class="fas fa-cog"></i>
+            <p>ajustes</p>
+         </li>
+        </a>
+    </ul>
+  </aside>
+
+  <section id="contenido">
+
+     <div class="movie">
+       <figure>
+         <img style="width: 500px;" src="images/pets.jpg" alt="movie-image">
+       </figure>
+     </div>
+
+  </section>
+</body>
+</html>
